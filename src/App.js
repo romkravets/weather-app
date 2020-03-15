@@ -11,7 +11,7 @@ const API_key = '68d18430c8773d7e121b1ef22184323d';
 class App extends React.Component {
   constructor() {
     super();
-    this.state={
+    this.state = {
       city: undefined,
       country: undefined,
       icon: undefined,
@@ -24,11 +24,49 @@ class App extends React.Component {
 
     };
     this.gerWeather();
+
+    this.weatherIcon = {
+      Thunderstorm: "wi-thunderstorm",
+      Drizzle: "wi-sleet",
+      Rain: "wi-storm-showers",
+      Snow: "wi-snow",
+      Atmosphere: "wi-fog",
+      Clear: "wi-day-sunny",
+      Clouds: "wi-day-fog"
+    }
   }
 
   calCelsius(temp) {
     let cell = Math.floor(temp - 273.15);
     return cell;
+  }
+
+  gerWeatherIcon(icons, rengeid) {
+    switch(true) {
+      case rengeid >= 200 && rengeid <= 232:
+        this.setState({icon: this.weatherIcon.Thunderstorm});
+        break;
+      case rengeid >= 300 && rengeid <= 321:
+        this.setState({icon: this.weatherIcon.Drizzle});
+        break;
+      case rengeid >= 500 && rengeid <= 531:
+        this.setState({icon: this.weatherIcon.Rain});
+        break;
+      case rengeid >= 600 && rengeid <= 622:
+          this.setState({icon: this.weatherIcon.Snow});
+        break;
+      case rengeid >= 701 && rengeid <= 781:
+          this.setState({icon: this.weatherIcon.Atmosphere});
+        break;
+      case rengeid === 800:
+          this.setState({icon: this.weatherIcon.Clear});
+        break;
+      case rengeid === 801 && rengeid <= 804:
+          this.setState({icon: this.weatherIcon.Clouds});
+        break;
+      default:
+        this.setState({icon: this.weatherIcon.Clouds});
+    }
   }
 
   gerWeather = async () => {
@@ -45,7 +83,10 @@ class App extends React.Component {
       temp_max: this.calCelsius(response.main.temp_max),
       temp_min: this.calCelsius(response.main.temp_min),
       description: response.weather[0].description,
-    })
+      icon: this.weatherIcon.Thunderstorm,
+    });
+
+    this.gerWeatherIcon(this.weatherIcon, response.weather[0].id);
   }
     render() {
   return (
@@ -57,6 +98,7 @@ class App extends React.Component {
       temp_max={this.state.temp_max}
       temp_min={this.state.temp_min}
       description={this.state.description}
+      weatherIcon={this.state.icon}
       />
     </div>
   );

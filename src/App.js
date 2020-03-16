@@ -20,6 +20,7 @@ class App extends React.Component {
       celsius: undefined,
       temp_max: undefined,
       temp_min: undefined,
+      speed: undefined,
       description: '',
       error: false,
 
@@ -91,8 +92,10 @@ class App extends React.Component {
       celsius: this.calCelsius(response.main.temp),
       temp_max: this.calCelsius(response.main.temp_max),
       temp_min: this.calCelsius(response.main.temp_min),
+      speed: response.wind.speed,
       description: response.weather[0].description,
       icon: this.weatherIcon.Thunderstorm,
+      error: false,
     });
 
     this.gerWeatherIcon(this.weatherIcon, response.weather[0].id);
@@ -110,6 +113,7 @@ class App extends React.Component {
       temp_celsius={this.state.celsius}
       temp_max={this.state.temp_max}
       temp_min={this.state.temp_min}
+      speed={this.state.speed}
       description={this.state.description}
       weatherIcon={this.state.icon}
       />

@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/romkravets/weather-app.git/static/css/main.4ee22edf.chunk.css",
+    "main.js": "/romkravets/weather-app.git/static/js/main.cd1ad9c4.chunk.js",
+    "main.js.map": "/romkravets/weather-app.git/static/js/main.cd1ad9c4.chunk.js.map",
+    "runtime-main.js": "/romkravets/weather-app.git/static/js/runtime-main.f6f18db3.js",
+    "runtime-main.js.map": "/romkravets/weather-app.git/static/js/runtime-main.f6f18db3.js.map",
+    "static/css/2.85be2ba9.chunk.css": "/romkravets/weather-app.git/static/css/2.85be2ba9.chunk.css",
+    "static/js/2.c0c5ad15.chunk.js": "/romkravets/weather-app.git/static/js/2.c0c5ad15.chunk.js",
+    "static/js/2.c0c5ad15.chunk.js.map": "/romkravets/weather-app.git/static/js/2.c0c5ad15.chunk.js.map",
+    "index.html": "/romkravets/weather-app.git/index.html",
+    "precache-manifest.e778dbddb67a63ebf1a1810842409890.js": "/romkravets/weather-app.git/precache-manifest.e778dbddb67a63ebf1a1810842409890.js",
+    "service-worker.js": "/romkravets/weather-app.git/service-worker.js",
+    "static/css/2.85be2ba9.chunk.css.map": "/romkravets/weather-app.git/static/css/2.85be2ba9.chunk.css.map",
+    "static/css/main.4ee22edf.chunk.css.map": "/romkravets/weather-app.git/static/css/main.4ee22edf.chunk.css.map",
+    "static/js/2.c0c5ad15.chunk.js.LICENSE.txt": "/romkravets/weather-app.git/static/js/2.c0c5ad15.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/romkravets/weather-app.git/static/media/blur-background.55d5567d.jpg",
+    "static/media/weather-icons.min.css": "/romkravets/weather-app.git/static/media/weathericons-regular-webfont.ed0943f2.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f6f18db3.js",
+    "static/css/2.85be2ba9.chunk.css",
+    "static/js/2.c0c5ad15.chunk.js",
+    "static/css/main.4ee22edf.chunk.css",
+    "static/js/main.cd1ad9c4.chunk.js"
+  ]
+}
